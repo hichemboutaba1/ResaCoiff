@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connexion — ResaCoiff</title>
+  <link rel="stylesheet" href="/css/global.css">
+  <style>
+    body { background:var(--gris-clair); min-height:100vh; display:flex; align-items:center; justify-content:center; }
+    .login-box { background:var(--blanc); border-radius:16px; box-shadow:var(--shadow-lg); padding:48px 40px; width:100%; max-width:420px; }
+    .login-logo { text-align:center; margin-bottom:32px; }
+    .login-logo a { font-size:28px; font-weight:800; color:var(--noir); }
+    .login-logo a span { color:var(--or); }
+    .login-logo p { color:var(--gris); font-size:14px; margin-top:6px; }
+    h1 { font-size:22px; font-weight:700; margin-bottom:24px; }
+    .btn { width:100%; margin-top:4px; }
+    .login-footer { text-align:center; margin-top:20px; font-size:13px; color:var(--gris); }
+    .login-footer a { color:var(--or-fonce); font-weight:500; }
+  </style>
+</head>
+<body>
+<div class="login-box fade-in">
+  <div class="login-logo">
+    <a href="/">Resa<span>Coiff</span></a>
+    <p>Espace coiffeur</p>
+  </div>
+  <h1>Connexion</h1>
+  <div id="error" class="alert alert-error" style="display:none"></div>
+  <form id="form-login">
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" required placeholder="votre@email.fr" autofocus>
+    </div>
+    <div class="form-group">
+      <label for="mot_de_passe">Mot de passe</label>
+      <input type="password" id="mot_de_passe" required placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;">
+    </div>
+    <button type="submit" class="btn btn-or btn-lg" id="btn-login">Se connecter</button>
+  </form>
+  <div class="login-footer"><a href="/">← Retour à l'accueil</a></div>
+</div>
+<script>
+document.getElementById('form-login').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const btn = document.getElementById('btn-login');
+  const err = document.getElementById('error');
+  err.style.display = 'none';
+  btn.innerHTML = '<span class="spinner"></span>';
+  btn.disabled = true;
+  const res = await fetch('/dashboard/login', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({ email:document.getElementById('email').value, mot_de_passe:document.getElementById('mot_de_passe').value }) });
+  const data = await res.json();
+  if (data.error) { err.textContent = data.error; err.style.display = 'block'; btn.innerHTML = 'Se connecter'; btn.disabled = false; }
+  else window.location.href = '/dashboard';
+});
+</script>
+</body>
+</html>

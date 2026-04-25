@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin — ResaCoiff</title>
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+<aside class="admin-sidebar">
+  <div class="sidebar-logo">
+    <a href="/">Resa<span>Coiff</span></a>
+    <div class="admin-tag">Admin</div>
+  </div>
+  <nav class="sidebar-nav">
+    <a href="#" class="nav-item active" data-page="dashboard"><span class="nav-icon">&#128202;</span> Tableau de bord</a>
+    <a href="#" class="nav-item" data-page="salons"><span class="nav-icon">&#9986;&#65039;</span> Salons</a>
+    <a href="#" class="nav-item" data-page="ajouter"><span class="nav-icon">&#10133;</span> Ajouter un salon</a>
+  </nav>
+  <div class="sidebar-bottom">
+    <button class="btn btn-danger btn-sm" onclick="logout()" style="width:calc(100% - 32px);margin:0 16px">Déconnexion</button>
+  </div>
+</aside>
+<div class="admin-main">
+  <header class="dash-header"><h1 id="page-title">Tableau de bord</h1></header>
+  <div class="dash-content" id="admin-content"></div>
+</div>
+<script src="/js/admin.js"></script>
+</body>
+</html>

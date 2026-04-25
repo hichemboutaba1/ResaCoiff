@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — ResaCoiff</title>
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-logo"><a href="/">Resa<span>Coiff</span></a></div>
+  <nav class="sidebar-nav">
+    <a href="#" class="nav-item active" data-page="reservations"><span class="nav-icon">&#128197;</span> Réservations</a>
+    <a href="#" class="nav-item" data-page="services"><span class="nav-icon">&#9986;&#65039;</span> Services</a>
+    <a href="#" class="nav-item" data-page="horaires"><span class="nav-icon">&#128336;</span> Horaires</a>
+    <a href="#" class="nav-item" data-page="fermetures"><span class="nav-icon">&#128274;</span> Fermetures</a>
+    <a href="#" class="nav-item" data-page="stats"><span class="nav-icon">&#128202;</span> Statistiques</a>
+    <a href="#" class="nav-item" data-page="profil"><span class="nav-icon">&#9881;&#65039;</span> Mon salon</a>
+  </nav>
+  <div class="sidebar-bottom">
+    <div id="sidebar-salon-name" style="font-size:13px;color:rgba(255,255,255,0.5);margin-bottom:10px;padding:0 16px"></div>
+    <button class="btn btn-danger btn-sm" onclick="logout()" style="width:calc(100% - 32px);margin:0 16px">Se déconnecter</button>
+  </div>
+</aside>
+<div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleSidebar()"></div>
+<div class="dash-main">
+  <header class="dash-header">
+    <button class="menu-toggle" onclick="toggleSidebar()">&#9776;</button>
+    <h1 id="page-title">Réservations</h1>
+    <div id="header-actions"></div>
+  </header>
+  <div class="dash-content" id="dash-content">
+    <div style="text-align:center;padding:80px;color:var(--gris)">Chargement...</div>
+  </div>
+</div>
+<script src="/js/dashboard.js"></script>
+</body>
+</html>
