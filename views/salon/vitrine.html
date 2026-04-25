@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Réservation en ligne</title>
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/vitrine.css">
+</head>
+<body>
+<div id="app">
+  <div class="cover" id="cover">
+    <div class="cover-overlay"></div>
+    <div class="cover-content">
+      <a href="/" class="cover-brand">Resa<span>Coiff</span></a>
+      <div id="salon-header"></div>
+    </div>
+  </div>
+  <main class="vitrine-main container">
+    <div class="salon-info-bar" id="salon-info-bar"></div>
+    <section class="section-block" id="section-services">
+      <h2 class="section-title">Choisissez votre service</h2>
+      <div class="services-grid" id="services-grid"></div>
+    </section>
+    <section class="section-block" id="section-calendrier" style="display:none">
+      <h2 class="section-title">Choisissez une date</h2>
+      <div class="calendar-wrap">
+        <div class="cal-nav">
+          <button class="btn btn-outline btn-sm" id="cal-prev">←</button>
+          <span id="cal-month-label"></span>
+          <button class="btn btn-outline btn-sm" id="cal-next">→</button>
+        </div>
+        <div class="cal-grid" id="cal-grid"></div>
+      </div>
+    </section>
+    <section class="section-block" id="section-creneaux" style="display:none">
+      <h2 class="section-title">Choisissez un créneau</h2>
+      <div class="creneaux-grid" id="creneaux-grid"></div>
+    </section>
+    <section class="section-block" id="section-form" style="display:none">
+      <h2 class="section-title">Vos coordonnées</h2>
+      <div class="recap-box" id="recap-box"></div>
+      <form id="form-resa" class="resa-form">
+        <div class="form-row">
+          <div class="form-group"><label for="client_nom">Prénom et nom *</label><input type="text" id="client_nom" required placeholder="Jean Dupont"></div>
+          <div class="form-group"><label for="client_email">Email *</label><input type="email" id="client_email" required placeholder="jean@email.fr"></div>
+        </div>
+        <div class="form-group"><label for="client_tel">Téléphone</label><input type="tel" id="client_tel" placeholder="06 12 34 56 78"></div>
+        <button type="submit" class="btn btn-or btn-lg" style="width:100%;margin-top:8px" id="btn-submit">Confirmer ma réservation</button>
+        <div id="form-error" class="alert alert-error" style="display:none"></div>
+      </form>
+    </section>
+    <section class="section-block" id="section-succes" style="display:none">
+      <div class="succes-card">
+        <div class="succes-icon">✓</div>
+        <h2>Réservation confirmée !</h2>
+        <p>Un email de confirmation vous a été envoyé.</p>
+        <div id="succes-details"></div>
+        <button class="btn btn-or" onclick="window.location.reload()">Faire une autre réservation</button>
+      </div>
+    </section>
+  </main>
+  <footer class="vitrine-footer"><a href="/">Propulsé par <strong>ResaCoiff</strong></a></footer>
+</div>
+<script src="/js/vitrine.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ResaCoiff — La réservation en ligne pour votre salon</title>
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="/" class="nav-logo">Resa<span>Coiff</span></a>
+    <div class="nav-links">
+      <a href="#fonctionnalites">Fonctionnalités</a>
+      <a href="#tarifs">Tarifs</a>
+      <a href="#demo">Démo</a>
+    </div>
+    <div class="nav-actions">
+      <a href="/dashboard/login" class="btn btn-outline btn-sm">Se connecter</a>
+      <a href="#tarifs" class="btn btn-or btn-sm">Essayer gratuitement</a>
+    </div>
+    <button class="nav-toggle" onclick="this.parentElement.classList.toggle('open')">&#9776;</button>
+  </div>
+</nav>
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-badge">❆ N°1 des salons connectés</div>
+    <h1>La réservation en ligne<br><span class="text-or">pour votre salon</span></h1>
+    <p class="hero-sub">Vos clients réservent 24h/24, vous gérez tout depuis un tableau de bord simple. Zéro appel manqué, zéro agenda papier.</p>
+    <div class="hero-cta">
+      <a href="#tarifs" class="btn btn-or btn-lg">Essayer gratuitement 30 jours</a>
+      <a href="/demo-salon" target="_blank" class="btn btn-outline btn-lg">Voir la démo ↗</a>
+    </div>
+    <p class="hero-note">✓ Sans carte bancaire &nbsp;·&nbsp; ✓ Résiliation à tout moment &nbsp;·&nbsp; ✓ Support inclus</p>
+  </div>
+  <div class="hero-bg"></div>
+</section>
+<section class="stats">
+  <div class="container stats-grid">
+    <div class="stat-item"><span class="stat-n">+2 000</span><span class="stat-l">salons inscrits</span></div>
+    <div class="stat-item"><span class="stat-n">24/7</span><span class="stat-l">réservations en ligne</span></div>
+    <div class="stat-item"><span class="stat-n">-40%</span><span class="stat-l">de rendez-vous manqués</span></div>
+    <div class="stat-item"><span class="stat-n">5 min</span><span class="stat-l">pour démarrer</span></div>
+  </div>
+</section>
+<section class="features" id="fonctionnalites">
+  <div class="container">
+    <div class="section-header"><span class="section-tag">Fonctionnalités</span><h2>Tout ce dont vous avez besoin,<br>rien de superflu</h2></div>
+    <div class="features-grid">
+      <div class="feature-card"><div class="feature-icon">&#128197;</div><h3>Calendrier intelligent</h3><p>Vos clients voient uniquement les créneaux disponibles. Les horaires fermés et les rendez-vous déjà pris sont automatiquement bloqués.</p></div>
+      <div class="feature-card"><div class="feature-icon">&#128233;</div><h3>Confirmations par email</h3><p>Un email de confirmation est envoyé automatiquement au client ET à vous, dès qu'un rendez-vous est pris.</p></div>
+      <div class="feature-card"><div class="feature-icon">&#128202;</div><h3>Tableau de bord</h3><p>Gérez vos services, vos horaires, vos jours de fermeture et consultez vos statistiques depuis une interface simple.</p></div>
+      <div class="feature-card"><div class="feature-icon">&#9986;&#65039;</div><h3>Multi-services</h3><p>Ajoutez autant de services que vous voulez (coupe, barbe, coloration…) avec les prix et durées correspondants.</p></div>
+      <div class="feature-card"><div class="feature-icon">&#128241;</div><h3>100% mobile</h3><p>Votre page de réservation est parfaitement optimisée pour les smartphones. Vos clients réservent en 3 clics.</p></div>
+      <div class="feature-card"><div class="feature-icon">&#128279;</div><h3>Votre propre lien</h3><p>Partagez votre lien personnalisé <strong>resacoiff.fr/votre-salon</strong> sur Instagram, WhatsApp, ou votre site.</p></div>
+    </div>
+  </div>
+</section>
+<section class="how" id="demo">
+  <div class="container">
+    <div class="section-header"><span class="section-tag">Simple</span><h2>Opérationnel en 5 minutes</h2></div>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><h3>Créez votre compte</h3><p>Renseignez le nom de votre salon, vos horaires et vos services en quelques minutes.</p></div>
+      <div class="step-arrow">→</div>
+      <div class="step"><div class="step-num">2</div><h3>Partagez votre lien</h3><p>Copiez votre lien unique <em>resacoiff.fr/mon-salon</em> et partagez-le partout.</p></div>
+      <div class="step-arrow">→</div>
+      <div class="step"><div class="step-num">3</div><h3>Recevez des RDV</h3><p>Vos clients réservent seuls, vous recevez une notification email à chaque nouveau RDV.</p></div>
+    </div>
+    <div class="how-cta"><a href="/demo-salon" target="_blank" class="btn btn-or btn-lg">Voir la page démo ↗</a></div>
+  </div>
+</section>
+<section class="pricing" id="tarifs">
+  <div class="container">
+    <div class="section-header"><span class="section-tag">Tarifs</span><h2>Un prix simple, tout inclus</h2></div>
+    <div class="pricing-card">
+      <div class="pricing-badge">Le plus populaire</div>
+      <div class="pricing-price"><span class="price-amount">29€</span><span class="price-period">/mois</span></div>
+      <p class="pricing-desc">Tout est inclus. Aucun surcout, aucune commission sur vos réservations.</p>
+      <ul class="pricing-list">
+        <li>✓ Page de réservation personnalisée</li>
+        <li>✓ Calendrier avec créneaux en temps réel</li>
+        <li>✓ Emails de confirmation automatiques</li>
+        <li>✓ Tableau de bord complet</li>
+        <li>✓ Services, horaires, fermetures illimités</li>
+        <li>✓ Support par email inclus</li>
+        <li>✓ 30 jours d'essai gratuit</li>
+      </ul>
+      <a href="mailto:contact@resacoiff.fr?subject=Inscription ResaCoiff" class="btn btn-or btn-lg" style="width:100%;margin-top:8px">Commencer l'essai gratuit</a>
+      <p style="text-align:center;margin-top:12px;font-size:13px;color:var(--gris)">Sans carte bancaire pour l'essai</p>
+    </div>
+  </div>
+</section>
+<section class="testimonials">
+  <div class="container">
+    <div class="section-header"><span class="section-tag">Témoignages</span><h2>Ils nous font confiance</h2></div>
+    <div class="testi-grid">
+      <div class="testi-card"><div class="testi-stars">★★★★★</div><p>"Depuis que j'utilise ResaCoiff, je ne rate plus aucun rendez-vous. Mes clients adorent pouvoir réserver à n'importe quelle heure."</p><div class="testi-author"><strong>Karim B.</strong> — Barbershop Karim, Lyon</div></div>
+      <div class="testi-card"><div class="testi-stars">★★★★★</div><p>"Super simple à configurer. En moins de 10 minutes j'avais ma page en ligne. Le tableau de bord est vraiment pratique."</p><div class="testi-author"><strong>Nadia L.</strong> — Salon L'Éclat, Marseille</div></div>
+      <div class="testi-card"><div class="testi-stars">★★★★★</div><p>"29€/mois c'est rien comparé au temps que je gagne. Plus besoin de répondre aux messages à 22h pour confirmer des RDV."</p><div class="testi-author"><strong>Thomas M.</strong> — BarberShop TM, Paris</div></div>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand"><a href="/" class="nav-logo">Resa<span>Coiff</span></a><p>La solution de réservation en ligne pensée pour les coiffeurs et barbiers.</p></div>
+    <div class="footer-links">
+      <div><h4>Produit</h4><a href="#fonctionnalites">Fonctionnalités</a><a href="#tarifs">Tarifs</a><a href="/demo-salon">Démo</a></div>
+      <div><h4>Compte</h4><a href="/dashboard/login">Connexion salon</a><a href="/admin/login">Admin</a></div>
+      <div><h4>Contact</h4><a href="mailto:contact@resacoiff.fr">contact@resacoiff.fr</a></div>
+    </div>
+  </div>
+  <div class="footer-bottom"><div class="container">© 2025 ResaCoiff — Tous droits réservés</div></div>
+</footer>
+</body>
+</html>
